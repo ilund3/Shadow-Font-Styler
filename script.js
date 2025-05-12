@@ -57,14 +57,31 @@ function generateCode() {
   }
 
   outputEl.innerText = result.trim();
+
+  const previewLink = document.getElementById('previewLink');
+  const base = 'https://erikdemaine.org/fonts/strip/simple.html'
+             + '?shadow=0&opacity=80&backlight=1';
+
+  // Rewrite into URL
+  const cpRaw = result.trim().replace(/ /g, '_');
+
+  const cpParam = encodeURIComponent(cpRaw);
+
+  previewLink.href = `${base}&cp=${cpParam}`;
 }
 
-// Copy the entire output to clipboard
-function copyToClipboard() {
-  const text = document.getElementById('output').innerText;
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.getElementById('copyButton');
-    btn.innerText = "Copied!";
-    setTimeout(() => btn.innerText = "Copy Code", 2000);
-  });
-}
+// Preview
+function openPreview() {
+    const outputEl = document.getElementById('output');
+    const code = outputEl.innerText.trim();
+    if (!code) return;  // nothing to preview
+  
+    const base = 'https://erikdemaine.org/fonts/strip/simple.html'
+               + '?shadow=0&opacity=80&backlight=1';
+  
+    const cpRaw   = code.replace(/ /g, '_');
+    const cpParam = encodeURIComponent(cpRaw);
+  
+    const url = `${base}&cp=${cpParam}`;
+    window.open(url, '_blank');
+  }  

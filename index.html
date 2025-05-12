@@ -21,8 +21,12 @@
   </ul>
   <p class="description">
     The original source of the above symbol nomenclature and a live preview of how this code translates into shadow text can be found here:  
-    <a href="https://erikdemaine.org/fonts/strip/simple.html?shadow=0&opacity=80&backlight=1"
-       target="_blank" rel="noopener">
+    <a 
+        id="previewLink"
+        href="https://erikdemaine.org/fonts/strip/simple.html?shadow=0&opacity=80&backlight=1"
+        target="_blank"
+        rel="noopener"
+    >
       Shadow Font Preview
     </a>.
   </p>
@@ -39,7 +43,7 @@
   <button onclick="generateCode()">Generate Folding Code</button>
 
   <div id="outputContainer">
-    <button id="copyButton" onclick="copyToClipboard()">Copy Code</button>
+    <button id="previewButton" onclick="openPreview()">See Preview</button>
     <pre id="output"></pre>
   </div>
 
