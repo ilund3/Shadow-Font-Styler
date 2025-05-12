@@ -7,8 +7,11 @@ const spaceCode =
   "/         /";
 
 let foldingCodes = [];
-
 fetch('codes.txt')
+  .then(res => res.text())
+  .then(text => {
+    foldingCodes = text.trim().split(/\r?\n\r?\n/);
+  });
 
 function validateInput() {
   const input = document.getElementById('inputText');
