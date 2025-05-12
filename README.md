@@ -4,18 +4,17 @@ Overview:
 	Shadow Font Styler is an interactive, web-based app that generates the folding algorithm needed to create desired shadow text with a strip of paper and light. It translates inputted text into instructions for users to fold the paper such that, when backlit, the shadows reveal the user-inputted text in Times New Roman font.
 
 How to Use the Software:
-1. Open index.html in a browser (or host it using Live Server).
+1. View live site at https://65310-2025.github.io/Shadow-Font-Styler/ (or open index.html in a browser/using Live Server).
 2. Enter text into the input field (Only uppercase letters (A–Z) and spaces are allowed; lowercase letters are automatically converted to uppercase).
-3. Click "Generate Folding Code" to produce the output. The symbols follow the same nomenclature as used in Strip Folding Designer, i.e. | → Perpendicular folds, / and \ → Diagonal folds (occupying one square), (space) → Blank square, ! → Half-square fold.
-4. Use the "Copy Code" button to quickly copy the result.
-5. The final folded product can also be previewed at [Strip Folding Designer](https://erikdemaine.org/fonts/strip/simple.html?shadow=0&opacity=80&backlight=1). 
+3. Click "Generate Folding Code" to produce the output. The symbols follow the same nomenclature as used in Strip Folding Designer (https://erikdemaine.org/fonts/strip/simple.html?shadow=0&opacity=80&backlight=1), i.e. | → Perpendicular folds, / and \ → Diagonal folds (occupying one square), (space) → Blank square, ! → Half-square fold.
+4. Use the "See Preview” button to see what the final folded product should look like under the light at Strip Folding Designer (https://erikdemaine.org/fonts/strip/simple.html?shadow=0&opacity=80&backlight=1). Your code will automatically be entered in. 
 
 Key Decisions:
 Web Implementation: Worked through HTML, CSS, and JavaScript for simplicity and accessibility across systems.
 Input Restrictions: Initially wanted to have several fonts available for users to choose from but realized that making the folding fonts was deceptively time-consuming and difficult. Decided to limit input to uppercase letters and spaces in Times New Roman for standardized folding generation.
 Data Handling: Switched to an external codes.txt file for storing the font code blocks for each letter. This helped to simplify code management and reduce clutter in the JavaScript file from large raw strings for the font characters.
 Dynamic Loading: Used fetch for pulling the font code blocks at runtime, giving easy access for updating the codes.txt file without altering the core JavaScript code. This made it easy for adjustments and opened the door for future character/font additions.
-Copy Feature: Added a Copy Code button (as opposed to manually copying the outputted code) to improve usability for users wanting to preview in Strip Folding Designer.
+See Preview: Added a See Preview button (as opposed to manually copying the outputted code) to improve usability for users wanting to preview in Strip Folding Designer (https://erikdemaine.org/fonts/strip/simple.html?shadow=0&opacity=80&backlight=1).
 Visual Consistency: Styled using a dark theme with a consistent accent color (#00b4d8) to create a modern and visually-appealing interface.
 
 Challenges Faced:
