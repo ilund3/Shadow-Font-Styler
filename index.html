@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow Font Styler</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Shadow Font Styler</h1>
+
+  <p class="description">
+    This tool generates the folding algorithm for making shadow text with paper when held up to the light.  
+    Each symbol in the output represents one fold unit:
+  </p>
+  <ul class="description-list">
+    <li><code>|</code> for perpendicular folds</li>
+    <li><code>/</code> and <code>\</code> for diagonal folds (occupying one square)</li>
+    <li>a blank (space) for an empty square</li>
+    <li><code>!</code> for a half-square fold</li>
+  </ul>
+  <p class="description">
+    You can see a live preview of how this code translates into shadow text here:  
+    <a href="https://erikdemaine.org/fonts/strip/simple.html?shadow=0&opacity=80&backlight=1"
+       target="_blank" rel="noopener">
+      Shadow Font Preview
+    </a>.
+  </p>
+
+  <p><strong>Font:</strong> Times New Roman</p>
+
+  <label for="inputText">Enter Your Text (Letters &amp; Spaces Only):</label>
+  <input type="text" id="inputText" placeholder="Type here..." oninput="validateInput()" />
+
+  <p id="warningMessage" style="color: #ff4d4d; display: none;">
+    ⚠️ Only uppercase A–Z letters and spaces are allowed.
+  </p>
+
+  <button onclick="generateCode()">Generate Folding Code</button>
+
+  <div id="outputContainer">
+    <button id="copyButton" onclick="copyToClipboard()">Copy Code</button>
+    <pre id="output"></pre>
+  </div>
+
+  <footer>By Isaac Lund, 2025</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
