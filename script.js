@@ -6,6 +6,7 @@ const spaceCode =
   "\\         \\\n" +
   "/         /";
 
+  // Load in folding codes
 let foldingCodes = [];
 fetch('codes.txt')
   .then(res => res.text())
