@@ -13,6 +13,26 @@ h1 {
     margin-bottom: 20px;
 }
 
+.sample-image-container {
+    margin: 30px auto;
+    max-width: 100%;
+}
+
+.sample-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.sample-caption {
+    font-style: italic;
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
 input[type="text"] {
     width: 100%;
     padding: 12px;
