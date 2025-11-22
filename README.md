@@ -1,5 +1,9 @@
 # Shadow-Font-Styler
 
+![Shadow Font Paper Sample](images/sample.jpg)
+
+*Shadow Font Styler is a platform to generate folding patterns that create these types of shadow font paper artworks. Simply enter your text, and the tool will provide you with the exact folding instructions needed to create your own shadow font creations.*
+
 Overview:
 	Shadow Font Styler is an interactive, web-based app that generates the folding algorithm needed to create desired shadow text with a strip of paper and light. It translates inputted text into instructions for users to fold the paper such that, when backlit, the shadows reveal the user-inputted text in Times New Roman font.
 
